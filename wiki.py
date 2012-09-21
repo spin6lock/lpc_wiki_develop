@@ -7,6 +7,7 @@ import markdown
 
 urls = (
     '/', 'Index',
+    '/pages', 'Pages',
     '/new', 'New',
     '/edit/(\d+)', 'Edit',
     '/delete/(\d+)', 'Delete',
@@ -22,8 +23,13 @@ t_globals = {
 render = web.template.render('templates', base='base', 
 globals=t_globals)
 
-
 class Index:
+    def GET(self):
+        """ show article named index """
+        page = model.get_page_by_url("index")
+        return render.view(page)
+
+class Pages:
 
     def GET(self):
         """ Show page """
