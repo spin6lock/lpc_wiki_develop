@@ -11,7 +11,7 @@ urls = (
     '/new', 'New',
     '/edit/(\d+)', 'Edit',
     '/delete/(\d+)', 'Delete',
-    '/(.*)', 'Page',
+    '/page/(.*)', 'Page',
 )
 
 
@@ -100,7 +100,7 @@ class Edit:
             description="Page title:"),
         web.form.Textarea('content', web.form.notnull, 
             rows=30, cols=80,
-            description="Page content:", post="Use markdown syntax"),
+            description="Page content:", post="\nUse markdown syntax"),
         web.form.Button('Update page'),
     )
 
@@ -119,7 +119,6 @@ class Edit:
         model.update_page(int(id), form.d.url, form.d.title, 
 form.d.content)
         raise web.seeother('/')
-
 
 app = web.application(urls, globals())
 
