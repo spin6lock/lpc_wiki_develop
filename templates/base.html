@@ -8,14 +8,16 @@ $def with (page)
         <title>My Wiki</title>
     <style>
     </style>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/static/demo.css" />
 </head>
 <body>
 
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/new">New Page</a></li>
-    <li><a href="/pages">All Pages</a></li>
+<ul class="navigation">
+    <li class="float_left"><a href="/">Home</a></li>
+    <li class="float_left"><a href="/new">New Page</a></li>
+    <li class="float_left"><a href="/pages">All Pages</a></li>
 </ul>
+<div name="split_line" style="width:100%;height:20px"></div>
 
 $:page
 

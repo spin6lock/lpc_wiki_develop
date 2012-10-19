@@ -3,11 +3,26 @@ $def with (page, form)
 <h1>Edit $form.d.title</h1>
 
 <form action="" method="post">
+<div class="wmd-panel">
 $:form.render()
+</div>
 </form>
 
+<h2>Preview</h2>
+        <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+        <script type="text/javascript" src="http://localhost:8080/static/Markdown.Converter.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/static/Markdown.Sanitizer.js"></script>
+        <script type="text/javascript" src="http://localhost:8080/static/Markdown.Editor.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var converter1 = Markdown.getSanitizingConverter();
+                var editor1 = new Markdown.Editor(converter1);
+                editor1.run();
+            })();
+        </script>
 
 <h2>Delete page?</h2>
 <form action="/delete/$page.id" method="post">
     <input type="submit" value="Delete page"/>
 </form>
+

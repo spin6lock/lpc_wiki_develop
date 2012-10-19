@@ -1,0 +1,49 @@
+body 
+{ 
+	background-color: White;
+    font-family: sans-serif;
+}
+
+.navigation
+{
+    height:22px;
+	background-color: Gainsboro;
+}
+
+.float_left
+{
+    float:left;
+    height:20px;
+    width:10%;
+}
+
+.wmd-panel
+{
+    /*
+	margin-left: 25%;
+	margin-right: 25%;
+    */
+	width: 50%;
+	min-width: 500px;
+    float:left;
+}
+
+#url,#title
+{
+	background-color: Gainsboro;
+}
+
+#content
+{ 
+	width: 100%;
+	background-color: Gainsboro;
+	border: 1px solid DarkGray;
+}
+
+.wmd-preview 
+{ 
+    float:left;
+	background-color: #c0e0ff; 
+}
+
+
