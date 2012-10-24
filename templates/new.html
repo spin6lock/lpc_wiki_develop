@@ -3,5 +3,21 @@ $def with (form)
 
 <h1>New Wiki Page</h1>
 <form action="" method="post">
+<div class="wmd-panel">
 $:form.render()
+</div>
 </form>
+
+<h2>Preview</h2>
+        <div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+        <script type="text/javascript" src="/static/Markdown.Converter.js"></script>
+        <script type="text/javascript" src="/static/Markdown.Sanitizer.js"></script>
+        <script type="text/javascript" src="/static/Markdown.Editor.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var converter1 = Markdown.getSanitizingConverter();
+                var editor1 = new Markdown.Editor(converter1);
+                editor1.run();
+            })();
+        </script>
+
