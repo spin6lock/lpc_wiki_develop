@@ -1,7 +1,6 @@
 """ Basic wiki using webpy 0.3 """
 import web
 import model
-import markdown
 
 ### Url mappings
 
