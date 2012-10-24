@@ -79,7 +79,7 @@ class New:
         if not form.validates():
             return render.new(form)
         model.new_page(form.d.url, form.d.title, form.d.content)
-        raise web.seeother('/' + form.d.url)
+        raise web.seeother('/page/' + form.d.url)
 
 
 class Delete:
@@ -118,7 +118,7 @@ class Edit:
             return render.edit(page, form)
         model.update_page(int(id), form.d.url, form.d.title, 
 form.d.content)
-        raise web.seeother('/')
+        raise web.seeother('/page/' + form.d.url)
 
 app = web.application(urls, globals())
 
