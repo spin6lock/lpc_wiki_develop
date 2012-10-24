@@ -7,7 +7,7 @@ $var title: $page.title
 <script type="text/javascript" src="/static/Markdown.Converter.js"></script>
 <script type="text/javascript">
 	window.onload = function(){
-		var text = "$page.content.replace("\r\n", "\\r\\n")";
+		var text = document.getElementById("source").innerText;
 		var converter = new Markdown.Converter();
 		var html = converter.makeHtml(text);
 		var insert_point = document.getElementById("page_content");
@@ -16,6 +16,7 @@ $var title: $page.title
 </script>
 
 <div id = "page_content">
+<textarea id = "source" style="display:none;">$:page.content</textarea>
 </div>
 
 <a href="/edit/$page.id">Edit</a>
