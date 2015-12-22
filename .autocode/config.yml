@@ -1,0 +1,7 @@
+name: spin6lock/lpc_wiki_develop
+author:
+  name: John Luk
+  email: john.37@gmail.com
+  url: null
+copyright: 2015 John Luk
+description: "simple wiki modified from web.py's wiki code example"
